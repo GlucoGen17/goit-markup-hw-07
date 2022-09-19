@@ -87,6 +87,24 @@ ol {
   margin-right: auto;
 }
 
+/*-------------------Logo-----------------*/
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+}
+
+.logo__dark {
+  color: #000000;
+}
+
+.logo__white {
+  color: #FFFFFF;
+}
+
 /*-------------------Header-----------------*/
 .header {
   padding-top: 24px;
@@ -98,57 +116,40 @@ ol {
   background-color: var(--white-background-color);
 }
 
-.header-flex {
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--accent-color);
-
-  align-items: center;
-  text-align: center;
-
+.header__logo {
   margin-right: 93px;
-
-  /* outline: 2px solid red; */
 }
 
-.header-logo-studio {
-  color: #000000;
-}
 
 /* -------------------Навигация--------------------- */
 
-.header-nav {
+.nav {
   display: flex;
   align-items: center;
 }
 
-.header-list {
+.nav__list {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
 
   display: flex;
   align-items: center;
-
-
-  /* outline: 2px solid red; */
 }
 
-.header-item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-link,
-.header-link:hover,
-.header-link:focus {
+.nav__link,
+.nav__link:hover,
+.nav__link:focus {
   color: var(--primary-text-color);
 
   padding-top: 32px;
@@ -158,46 +159,16 @@ ol {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link:hover,
-.header-link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-color);
 }
 
-.header-link.current {
+.nav__link--current {
   color: var(--accent-color);
 }
 
-.header-contact {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-
-  /* outline: 2px solid red; */
-}
-
-.header-contact-item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.header-contact-link {
-  color: var(--secondary-text-color);
-  display: flex;
-  align-items: center;
-  justify-items: center;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-contact-link:hover,
-.header-contact-link:focus {
-  color: var(--accent-color);
-}
-
-.header-link.link.current::after {
+.nav__link--current::after {
   position: absolute;
 
   display: block;
@@ -210,7 +181,37 @@ ol {
   background-color: var(--accent-background-color);
 }
 
-.contact-icon {
+.contact {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+
+  /* outline: 2px solid red; */
+}
+
+.contact__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.contact__link {
+  color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact__link:hover,
+.contact__link:focus {
+  color: var(--accent-color);
+}
+
+.contact__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -557,54 +558,41 @@ ol {
   padding-bottom: 60px;
 }
 
-.footer-bloks {
+.footer__container {
   display: flex;
   align-items: baseline
 }
 
-.footer-logo {
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--accent-color);
+.footer__logo {
   display: block;
   margin-bottom: 20px;
 }
 
-.footer-logo-studio {
-  color: var(--white-text-color);
-}
-
-.footer-list {
+.address {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
   /* margin-top: 20px; */
 }
 
-.footer-item:nth-child(n + 2) {
+.address__item:nth-child(n + 2) {
   margin-top: 9px;
 }
 
-.footer-contact-aderess {
+.aderess__link--white {
   color: var(--white-text-color);
 }
 
-.footer-contact-mail {
+.aderess__link--grey {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-contact-tel {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-social {
+.socials {
   margin-left: 70px;
   width: 205px;
 }
 
-.footer-social-text {
+.social__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -613,7 +601,7 @@ ol {
   margin-bottom: 20px;
 }
 
-.footer-social-list {
+.social__list {
   display: flex;
   padding: 0;
   margin-top: 0;
@@ -621,17 +609,17 @@ ol {
   align-items: center;
 }
 
-.footer-social-item {
+.social__item {
   width: 44px;
   height: 44px;
   margin-right: 10px;
 }
 
-.footer-social-item:last-child {
+.social__item:last-child {
   margin-right: 0;
 }
 
-.footer-social-link {
+.social__link {
   display: block;
 
   width: 44px;
@@ -646,23 +634,23 @@ ol {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
+.social__link:hover,
+.social__link:focus {
   color: #ffffff;
   background-color: #2196f3;
 }
 
-.footer-social-icon {
+.social__icon {
   margin-top: 12px;
   margin-left: 12px;
   fill: currentColor;
 }
 
-.footer-subscribe {
+.subscribe {
   margin-left: 93px;
 }
 
-.footer-subscribe-text {
+.subscribe__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -674,11 +662,11 @@ ol {
   margin-bottom: 20px;
 }
 
-.footer-subscribe-form {
+.subscribe__form {
   display: flex;
 }
 
-.footer-subscribe-input {
+.subscribe__input {
   width: 358px;
   padding-left: 16px;
   border-radius: 4px;
@@ -688,14 +676,14 @@ ol {
   color: var(--white-text-color);
 }
 
-.footer-subscribe-input::placeholder {
+.subscribe__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
 
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-subscribe-btn {
+.subscribe__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -720,7 +708,7 @@ ol {
   margin-left: 12px;
 }
 
-.subscribe-icon {
+.subscribe__icon {
   margin-left: 10px;
   fill: #ffffff;
 }
@@ -942,12 +930,12 @@ ol {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form {
+.modal__form {
   padding: 40px;
   width: 528px;
 }
 
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -959,21 +947,11 @@ ol {
   color: var(--main-text);
 }
 
-.form-top {
-  margin-top: 12px;
-}
-
 .form-field {
   position: relative;
   align-items: center;
   margin-bottom: 10px;
 }
-
-/* .form-field-last {
-  position: relative;
-  align-items: center;
-  margin-bottom: 20px;
-} */
 
 .form-input-svg {
   position: relative;
