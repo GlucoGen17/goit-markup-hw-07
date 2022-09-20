@@ -1,8 +1,7 @@
 .backdrop {
   position: fixed;
 
-  display: flex;
-  align-items: center;
+  @extend %align-list;
   justify-content: center;
   top: 0;
   left: 0;
@@ -40,8 +39,7 @@
 .modal-close {
   position: absolute;
 
-  display: flex;
-  align-items: center;
+  @extend %align-list; 
   justify-content: center;
 
   right: 8px;
@@ -53,16 +51,16 @@
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-}
 
-.modal-close:hover,
-.modal-close:focus {
+
+  &:hover,
+  &:focus {
   fill: #2196f3;
   border-color: #2196f3;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+}
 .modal__form {
   padding: 40px;
   width: 528px;
@@ -101,17 +99,15 @@
   border-radius: 4px;
   
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form__input:hover,
-.form__input:focus {
+&:hover,
+&:focus {
   border-color: #2196f3;
-  outline: none;
-}
+  outline: none;}
 
-.form__input:hover~.form__icon,
-.form__input:focus~.form__icon {
-  fill:#2196f3;
+&:hover~.form__icon,
+&:focus~.form__icon {
+  fill:#2196f3;}
 }
 
 .form__label {
@@ -155,17 +151,18 @@
 
   margin-top: 4px;
 
-  outline:none
-}
+  outline:none;
 
-.form__field-comment:focus,
-.form__field-comment:hover {
+
+  &:focus,
+  &:hover {
   border-color: #2196f3;
   
 }
 
-.form__field-comment::placeholder {
+  &::placeholder {
   color:rgba(117, 117, 117, 0.5);
+}
 }
 
 .form__label-comment {
@@ -203,12 +200,12 @@
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
 
-.form__check-input:checked + .check-laben span {
+.form__check-input:checked+.form__check-laben span {
 background-color: #2196f3;
 border: none;
 }
 
-.form__check-input:checked+.check-laben .check-icon {
+.form__check-input:checked+.form__check-laben .form__check-icon {
 fill: #ffffff;
 }
 
@@ -247,12 +244,13 @@ fill: #ffffff;
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form__btn:hover,
-.form__btn:focus {
+
+  &:hover,
+  &:focus {
   background-color: #188CE8;
   border-color: #188CE8;
   color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 }
