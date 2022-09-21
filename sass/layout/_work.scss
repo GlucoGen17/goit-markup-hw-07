@@ -4,11 +4,10 @@
 }
 
 .work__title {
-  @include font(36px, 700, 1.16, 0.3em);
-  // font-weight: 700;
-  // font-size: 36px;
-  // line-height: 1.16;
-  // letter-spacing: 0.3em;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.3em;
   text-align: center;
   color: var(--primary-text-color);
 }
@@ -34,10 +33,12 @@
   position: absolute;
   bottom: 0;
   left: 0;
-
-  /* justify-content:; */
-  padding-top: 27px;
-  padding-bottom: 27px;
+  height: calc(100%/4.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 27px;
+  // padding-bottom: 27px;
 
   font-weight: bold;
   font-size: 14px;
